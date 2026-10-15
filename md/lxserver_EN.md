@@ -5,8 +5,8 @@
 <div align="center">
   <p>
     <img src="https://img.shields.io/badge/build-passing-brightgreen?style=flat-square" alt="Build Status">
-    <img src="https://img.shields.io/badge/version-v2.1.1-blue?style=flat-square" alt="Version">
-    <img src="https://img.shields.io/badge/node-%3E%3D16-green?style=flat-square" alt="Node Version">
+    <img src="https://img.shields.io/github/package-json/v/XCQ0607/lxserver?style=flat-square" alt="Version">
+    <img src="https://img.shields.io/badge/node-%3E%3D20-green?style=flat-square" alt="Node Version">
     <img src="https://img.shields.io/github/license/XCQ0607/lxserver?style=flat-square" alt="License">
     <br>
     <br>
@@ -16,6 +16,15 @@
     <a href="https://github.com/XCQ0607/lxserver/commits/main"><img src="https://img.shields.io/github/last-commit/XCQ0607/lxserver?style=flat-square&color=blueviolet" alt="Last Commit"></a>
     <img src="https://img.shields.io/github/commit-activity/m/XCQ0607/lxserver?style=flat-square&color=ff69b4" alt="Commit Activity">
     <a href="https://github.com/XCQ0607/lxserver/releases"><img src="https://img.shields.io/github/downloads/XCQ0607/lxserver/total?style=flat-square&color=blue" alt="Total Downloads"></a>
+  </p>
+  <p>
+    <a href="https://www.star-history.com/xcq0607/lxserver">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?repo=XCQ0607/lxserver&type=trending&theme=dark" />
+        <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/badge?repo=XCQ0607/lxserver&type=trending" />
+        <img alt="GitHub Trending Repository of the Day" src="https://api.star-history.com/badge?repo=XCQ0607/lxserver&type=trending" />
+      </picture>
+    </a>
   </p>
 </div>
 
@@ -57,11 +66,26 @@ Built-in lightweight file management system for viewing, downloading, and search
 
 ---
 
-## 📖 Dashboard Guide
+## 📖 Dashboard & Connection Guide
 
-1. **Access Dashboard**: Visit `http://your-ip:9527`.
+1. **Access Dashboard**: Visit `http://<server-ip>:9527/admin` (Default dashboard path is `/admin`, default admin password: `123456`).
 2. **Initial Setup**: Change your default password in "System Config" immediately after first login.
-3. **Add User**: Create sync accounts in the "User Management" page. The generated password is the key for LX Music client connection. (Default: username `admin`, password `password`).
-4. **Backup Strategy**: It's highly recommended to configure cloud backup in "WebDAV Sync" for data safety.
+3. **Add User & Client Connection**: Create sync accounts in the "User Management" page.
+   - **User Path Mode (Default & Recommended)**: Client sync URL is `http://<server-ip>:9527/<username>`, password is the user's password. Multiple users can share identical passwords.
+   - **Root Path Mode (Requires enabling in System Config)**: Client sync URL is `http://<server-ip>:9527`, password is the user's password. All user passwords must be strictly unique.
+4. **Subsonic Client Connection**: Use third-party Subsonic clients (e.g. Yinliu, Feishin) to connect to `http://<server-ip>:9527/rest` with user credentials created in the dashboard.
+5. **Backup Strategy**: It's highly recommended to configure cloud backup in "WebDAV Sync" for data safety.
 
 > 💡 For more technical details (Docker deployment, Nginx config, variables, etc.), please return to the **[Project Homepage (README_EN.md)](../README_EN.md)**.
+
+---
+
+## 📈 Star History
+
+<a href="https://www.star-history.com/?repos=xcq0607%2Flxserver&type=timeline&logscale=&releases=&legend=bottom-right">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=xcq0607/lxserver&type=timeline&theme=dark&logscale&legend=bottom-right" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=xcq0607/lxserver&type=timeline&logscale&legend=bottom-right" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=xcq0607/lxserver&type=timeline&logscale&legend=bottom-right" />
+ </picture>
+</a>
